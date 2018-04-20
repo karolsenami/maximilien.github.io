@@ -1,0 +1,46 @@
+---
+---
+
+.introduction {
+  display: flex;
+  background-color: red;
+
+  .profile-picture {
+    display: inline;
+    img {
+      width: 200px;
+    }
+  }
+
+  .profile-description {
+    text-align: right;
+  }
+}
+
+.posts {
+  .posts-title {
+
+  }
+
+  .post {
+    display: flex;
+    .post-cover {
+      .index {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 10;
+      }
+
+      img {
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .post-description {
+
+    }
+  }
+}

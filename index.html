@@ -1,0 +1,103 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="{{ site.baseurl }}/css/index.css">
+<main>
+  <section class="introduction">
+      <div class="profile-picture half-parent-size">
+        <img src="assets/images/avatar.png" alt="a drawing of me">
+        <span class="picture-description normal-text">
+          me
+        </span>
+      </div>
+      <div class="profile-description half-parent-size">
+        I am a
+        <select>
+          <option value="creative coder">creative coder</option>
+          <option value="creative technologist">creative technologist</option>
+          <option value="designer">designer</option>
+          <option value="swiss army knife">swiss army knife</option>
+        </select>
+         in Paris</br>
+        I develop
+        <select>
+          <option value="software">software</option>
+          <option value="video games">video games</option>
+          <option value="mobile apps">mobile apps</option>
+          <option value="websites">websites</option>
+        </select>
+        </br>
+        I studied at Gobelins for
+        <select>
+          <option value="1+2">1+2</option>
+          <option value="2+1">2+1</option>
+          <option value="3">3</option>
+        </select>
+         years</br>
+        I like
+        <select>
+          <option value="meaningful">meaningful</option>
+          <option value="useful">useful</option>
+          <option value="challenging">challenging</option>
+          <option value="original">original</option>
+          <option value="beautiful">beautiful</option>
+        </select>
+         projects</br>
+        This website is
+        <select>
+          <option value="a work in progress">a work in progress</option>
+          <option value="an example of my busyness">an example of my busyness</option>
+          <option value="2-days-developed 1-page website">2-days-developed 1-page website</option>
+          <option value="efficient and direct portfolio">efficient and direct portfolio</option>
+        </select></br>
+        I am currently looking for a
+        <select>
+          <option value="CDI or CDD">CDI or CDD contract</option>
+          <option value="good team">good & ambitious team</option>
+          <option value="productive studio">productive studio</option>
+          <option value="Paris-based studio">Paris-based studio</option>
+        </select>
+      </div>
+  </section>
+  <section class="posts">
+    <h1 class="posts-title">What I did :</h1>
+    {% for post in site.posts %}
+      <!-- <a href="{{ site.baseurl }}{{ post.url }}"> -->
+        <article class="post">
+          <div class="post-cover half-parent-size">
+
+            <div class="index">
+              1/8
+            </div>
+
+            <img class="post-cover-picture" src="{{ site.baseurl }}{{ post.preview }}" alt="Cover image for {{post.title}}">
+
+            <div class="date">
+              {{ post.year }}
+            </div>
+
+          </div>
+
+          <div class="post-description half-parent-size">
+
+            <h1 class="title"><a href="{{ site.baseurl }}{{ post.url }}">
+              {{ post.title }}
+            </a></h1>
+
+            <div class="entry">
+              {{ post.description }}
+            </div>
+
+            <div class="credits">
+
+            </div>
+
+          </div>
+
+
+
+        </article>
+      <!-- </a> -->
+    {% endfor %}
+  </section>
+</main>

@@ -1,0 +1,24 @@
+
+//
+// VARIABLES
+//
+
+// Colors
+$black: #1a1a1a;
+$blue : blue;
+$darkerGray: #222;
+$darkGray: #333;
+$gray: #666;
+$lightGray: #eee;
+$white: #fff;
+
+// Font stacks
+$font-normal: Hack, Helvetica, sans-serif;
+$font-title: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// Mobile breakpoints
+@mixin mobile {
+  @media screen and (max-width: 640px) {
+    @content;
+  }
+}

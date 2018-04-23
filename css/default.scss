@@ -18,16 +18,24 @@ html {
 }
 
 body {
-	background: $black;
-  font: 20px/1.4 $font-normal;
-  color: $white;
+  font: 16px/1.4 $font-normal;
+  font-weight: lighter;
+  letter-spacing: 0.2em;
+  color: $textColor;
+  background-color: $bodyBackgroundColor;
+}
+
+main {
+  max-width: 1300px;
+  margin: auto;
 }
 
 .container {
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 10px;
-  width: 100%;
+  background: $backgroundColor;
+  $profile-horizontal-margin: 1%;
+  margin: 1%;
+  padding: $profile-horizontal-margin;
+  width: 98%;
 }
 
 .half-parent-size {
@@ -36,11 +44,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-title;
-  color: $white;
-  font-weight: bold;
-
+  font-weight: 1000;
   line-height: 1.7;
-  margin: 1em 0 15px;
   padding: 0;
 
   @include mobile {
@@ -49,22 +54,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 60px;
+  font-style: italic;
+  text-shadow: 1px 1px 0 $textColor , -1px -1px 0 $textColor , 1px -1px 0 $textColor , -1px 1px 0 $textColor ;
+  color: $backgroundColor;
+  text-overflow: clip;
   a {
     color: inherit;
   }
 }
 
+
 h2 {
-  font-size: 24px;
+  font-size: 50px;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 40px;
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 30px;
   color: $gray;
 }
 
@@ -142,18 +152,15 @@ img {
 }
 
 header {
-  background-color: rgb(10,10,10);
+  margin-bottom: $bottom-margin;
 }
 
 nav {
-  float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
   font-family: $font-normal;
   font-size: 18px;
-
+  position: relative;
+  right: 0;
   @include mobile {
-    float: none;
-    margin-top: 9px;
     display: block;
     font-size: 16px;
   }
@@ -163,52 +170,12 @@ nav {
     color: $darkGray;
     text-align: right;
     font-weight: 300;
-    letter-spacing: 1px;
 
     @include mobile {
       margin: 0 10px;
       color: $blue;
     }
   }
-}
-
-//
-// .main
-//
-
-.posts > .post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
-}
-
-.posts > .post:last-child {
-  padding-bottom: 1em;
-  border-bottom: none;
-}
-
-.post {
-  blockquote {
-    margin: 1.8em .8em;
-    border-left: 2px solid $gray;
-    padding: 0.1em 1em;
-    color: $gray;
-    font-size: 22px;
-    font-style: italic;
-  }
-
-  .comments {
-    margin-top: 10px;
-  }
-
-  .read-more {
-    text-transform: uppercase;
-    font-size: 15px;
-  }
-}
-
-footer {
-  padding: 20px 0;
-  text-align: center;
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS

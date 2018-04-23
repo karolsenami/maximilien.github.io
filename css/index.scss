@@ -1,46 +1,123 @@
 ---
 ---
+@import "variables";
 
 .introduction {
   display: flex;
-  background-color: red;
+  margin-bottom:$bottom-margin;
 
+  // left
   .profile-picture {
+    margin: auto;
     display: inline;
+
     img {
       width: 200px;
     }
+
+    .picture-description {
+      position: relative;
+      top: -150px;
+      left: 70px;
+      margin: auto;
+      display: inline-block;
+    }
   }
 
+  // right
   .profile-description {
+    font-size: 1.5em;
     text-align: right;
+
+    select {
+      font-size: 80%;
+    }
+    .width {
+      font-size: 80%;
+      display: none;
+    }
+
+    .contract {
+      font-weight: bold;
+    }
   }
 }
 
 .posts {
   .posts-title {
-
+    margin-bottom:1em;
+    background: rgba(234,221,6,0.9);
+    display: inline-block;
   }
 
   .post {
     display: flex;
+    margin-bottom: $bottom-margin;
+
+    $post-offset-top: 21px;
+    $post-offset-left: 30px;
+    $children-horizontal-padding: 5%;
+    //left
     .post-cover {
+      padding-right: $children-horizontal-padding;
       .index {
+        $index-width: 2.5em;
+        font-size: 20px;
         position: relative;
-        top: 0;
-        left: 0;
+        // top: $post-offset-top;
+        left: $post-offset-left;
         z-index: 10;
+        background: red;
+        display: inline-block;
+        width: $index-width;
+        height: $index-width;
+        text-align: center;
+        vertical-align: middle;
+        line-height: $index-width;
+        background: red;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
       }
 
       img {
         position: relative;
         top: 0;
+        padding-top: $post-offset-top;
+        padding-bottom: $post-offset-top;
         left: 0;
+      }
+
+      .date {
+        position: relative;
+        // bottom: $post-offset-top;
+        left: $post-offset-left;
+        z-index: 10;
       }
     }
 
+    // right
     .post-description {
+      padding-left: $children-horizontal-padding;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      * {
+        margin: auto 0;
+      }
+      :last-child {
+        padding-bottom: 0;
+      }
 
+      .title {
+        margin-left: 5%;
+      }
+      .credits {
+        margin-left: 3%;
+      }
     }
+  }
+  .post:last-child {
+    padding-bottom: 1em;
   }
 }

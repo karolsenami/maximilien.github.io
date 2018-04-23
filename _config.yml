@@ -8,8 +8,7 @@ name: Maximilien Jourdain's portfolio
 # Short bio or description (displayed in the header)
 description: Creative coder & technologist from Paris.
 
-# URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/assets/images/jekyll-logo.png
+preview-image: https://digitaslabs.github.io/assets/images/labs-logo-700.jpg
 
 #
 # Flags below are optional
@@ -75,7 +74,7 @@ sass:
 # Use the following plug-ins
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-  
+
 # Exclude these files from your production _site
 exclude:
   - Gemfile

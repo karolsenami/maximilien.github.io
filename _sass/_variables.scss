@@ -4,18 +4,23 @@
 //
 
 // Colors
+$bodyBackgroundColor: #333;
+$backgroundColor: #fff;
+$textColor: #333;
 $black: #1a1a1a;
 $blue : blue;
 $darkerGray: #222;
 $darkGray: #333;
 $gray: #666;
 $lightGray: #eee;
-$white: #fff;
+$bottom-margin: 4em;
 
 // Font stacks
-$font-normal: Hack, Helvetica, sans-serif;
-$font-title: "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+// $font-normal: Questrial, Helvetica, sans-serif;
+$font-normal: Arvo, Helvetica, sans-serif;
+$font-title: "Arvo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+// font-family: 'Playfair Display', serif;
+// font-family: 'Arvo', serif;
 // Mobile breakpoints
 @mixin mobile {
   @media screen and (max-width: 640px) {

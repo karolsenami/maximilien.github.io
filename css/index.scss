@@ -26,7 +26,9 @@
 
   // right
   .profile-description {
+    width: 67%;
     font-size: 1.5em;
+    line-height: 1.7em;
     text-align: right;
 
     select {
@@ -39,6 +41,7 @@
 
     .contract {
       font-weight: bold;
+      font-size: 120%;
     }
   }
 }
@@ -60,6 +63,7 @@
     //left
     .post-cover {
       padding-right: $children-horizontal-padding;
+      margin: auto;
       .index {
         $index-width: 2.5em;
         font-size: 20px;
